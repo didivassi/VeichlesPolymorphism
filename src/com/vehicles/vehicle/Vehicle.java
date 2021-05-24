@@ -14,6 +14,8 @@ public abstract class Vehicle {
         this.fuelTankCapacity=fuelTankCapacity;
         this.model=model;
         rented=false;
+        fuelOnTank=fuelTankCapacity;
+
     }
 
 
@@ -24,7 +26,7 @@ public abstract class Vehicle {
         }
         double fuelConsumed = consumptionRate*distance;
         if(fuelConsumed>fuelOnTank){
-            System.out.println("I don't have enough fuel to drive that long");
+            System.out.println("I don't have enough fuel to drive that long " + fuelConsumed + " " +fuelOnTank );
             return;
         }
         fuelOnTank -=  fuelConsumed;

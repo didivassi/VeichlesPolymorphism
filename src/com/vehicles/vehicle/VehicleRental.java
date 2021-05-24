@@ -60,12 +60,14 @@ public class VehicleRental {
         double amount=makeBill(vehicle);
         vehicle.setRented(false);
         System.out.println("Your bill is " + amount);
+
     }
 
     public double makeBill(Vehicle vehicle){
             double amountToPay=0d;
             if(vehicle.getFuelOnTank() <  vehicle.fuelTankCapacity){
                 amountToPay=(vehicle.fuelTankCapacity-vehicle.getFuelOnTank())*PRICE_CHARGED_FUEL;
+                vehicle.refuel();
             }
             return amountToPay;
     }

@@ -36,4 +36,8 @@ public class HybridCar extends Car{
         batteryLevel = batteryLevel > 100 ? 100 : batteryLevel;
         System.out.println("Your battery is now " +  batteryLevel);
     }
+
+    public double getBatteryLevel() {
+        return batteryLevel;
+    }
 }
