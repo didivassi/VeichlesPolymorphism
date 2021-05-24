@@ -2,6 +2,7 @@ package com.vehicles.vehicle;
 
 public class Moto extends Vehicle{
 
+    final private double MAX_DISTANCE=80;
     public Moto(String model){
         super(30, model);
         super.type= vehicleType.MOTO;
@@ -11,8 +12,8 @@ public class Moto extends Vehicle{
 
     @Override
     public void drive(double time, double distance) {
-        if(distance>80){
-            System.out.println("You cant drive more than 80KM ");
+        if(distance>MAX_DISTANCE){
+            System.out.println("You cant drive more than "+MAX_DISTANCE+"KM ");
             return;
         }
         super.drive(time, distance);
