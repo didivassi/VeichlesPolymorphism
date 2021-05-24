@@ -11,7 +11,7 @@ public class HybridCar extends Car{
     }
 
     @Override
-    public void drive(int time, int distance) {
+    public void drive(double time, double distance) {
         if(distance/time <=25){
             double batteryConsumed = batteryConsumptionRate*distance;
             if(batteryConsumed>batteryLevel){

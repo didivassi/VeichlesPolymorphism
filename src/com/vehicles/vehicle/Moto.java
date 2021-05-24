@@ -10,7 +10,7 @@ public class Moto extends Vehicle{
     }
 
     @Override
-    public void drive(int time, int distance) {
+    public void drive(double time, double distance) {
         if(distance>80){
             System.out.println("You cant drive more than 80KM ");
             return;

@@ -24,14 +24,13 @@ public class Main {
 
         if(myVehicle!=null){
             myVehicle.drive(1,120);
-            myVehicle.refuel();
             myVehicle.drive(1,120);
             myVehicle.drive(10,250);
             myVehicle.drive(100,2500);
             myVehicle.drive(100,2500);
             myVehicle.drive(100,2500);
             myVehicle.drive(100,2500);
- 
+
 
             System.out.println(((HybridCar) myVehicle).getBatteryLevel());
         }

@@ -8,7 +8,7 @@ public abstract class Vehicle {
     protected vehicleType type;
     protected double fuelOnTank;
     protected double consumptionRate;
-    protected int maxSpeed;
+    protected double maxSpeed;
 
     public Vehicle(double fuelTankCapacity, String model){
         this.fuelTankCapacity=fuelTankCapacity;
@@ -19,7 +19,7 @@ public abstract class Vehicle {
     }
 
 
-    public void drive(int time, int distance){
+    public void drive(double time, double distance){
         if(distance/time >maxSpeed){
             System.out.println(("I can’t drive at this speed"));
             return;
